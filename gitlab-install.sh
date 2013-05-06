@@ -128,6 +128,8 @@ cp config/puma.rb.example config/puma.rb;
 cp config/database.yml.mysql config/database.yml
 sed -i 's/root/gitlab/g' config/database.yml
 sed -i 's/\"secure password\"/$userPassword/g' config/database.yml;"
+sudo -u git -H git config --global user.name "GitLab"
+sudo -u git -H git config --global user.email "gitlab@$domain"
 
 # Install Gems
 echo -e "\e[1;36mInstalling Gems\e[0m"
@@ -177,3 +179,6 @@ echo -e "\e[1;36m#### http://$ip\e[0m"
 echo -e "\e[1;36m#### Username: admin@local.host\e[0m"
 echo -e "\e[1;36m#### Password: 5iveL!fe\e[0m"
 echo -e "\e[1;36m####################################################\e[0m"
+echo -e "\e[1;31mPLEASE HIT ENTER TO FINISH INSTALL AND REBOOT YOUR MACHINE\e[0m"
+read var
+shutdown -r now
