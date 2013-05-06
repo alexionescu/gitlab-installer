@@ -169,7 +169,6 @@ sudo service gitlab start
 sudo service nginx start
 
 echo -e "\e[1;36m####################################################\e[0m"
-echo -e "\e[1;36m#### Please wait 2-3 minutes while GitLab starts.\e[0m"
 echo -e "\e[1;36m#### Domain: $domain\e[0m"
 echo -e "\e[1;36m#### IP: $ip\e[0m"
 if [ -z $userPasswordVerify ] ; then
