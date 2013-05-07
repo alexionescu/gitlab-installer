@@ -3,7 +3,17 @@ gitlab-installer
 
 This bash script installs GitLab 5.1 for you.
 
-This script is intended to work on a **clean** install of Ubuntu 12.04 LTS x64. 
+This script is intended to work on a **clean** install of Ubuntu 12.04 LTS x64.
+
+* Unattended install once started
+* Updates your packages
+* Downloads & compiles ruby, redis, etc
+* Creates user for git
+* Installs gitlab-shell
+* Sets up MySQL server & inits database
+* Postfix for emails
+* Sets up init script for gitlab
+* Nginx for web interface
 
 
 ### USAGE
