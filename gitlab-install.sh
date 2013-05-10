@@ -3,7 +3,7 @@
 # GITLAB 5.1 Install Script
 # Author: Alex Ionescu <ionescuac@gmail.com>
 # This script performs an automatic install of Gitlab 5.1
-# Tested on clean install of Ubuntu 12.04 LTS x64 & 13.04 x64
+# Tested on clean install of Ubuntu 12.04 LTS x64
 
 
 # Test if we have root
@@ -94,7 +94,6 @@ echo -e "\e[1;36mInstalling MySql\e[0m"
 sleep 2
 if [ -z $userPassword ] ; then
 	apt-get install -y makepasswd # needed to create unique password non-interactively
-# 
 	userPassword=$(makepasswd --char=12) #generate random MySQL password
 fi
 # Next few lines creates cleartext copy of password only readable by root,
