@@ -20,6 +20,6 @@ This script is intended to work on a **clean** install of Ubuntu 12.04 LTS x64.
 Run script as root account
 
     sudo su
-    wget https://raw.github.com/alexionescu/gitlab-installer/stable/gitlab-install.sh
+    wget https://raw.github.com/alexionescu/gitlab-installer/v5.1/gitlab-install.sh
     chmod +x ./gitlab-install.sh
     ./gitlab-install.sh
