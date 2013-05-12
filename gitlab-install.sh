@@ -1,10 +1,30 @@
 #!/bin/bash
 
-# GITLAB 5.1 Install Script
-# Author: Alex Ionescu <ionescuac@gmail.com>
-# This script performs an automatic install of Gitlab 5.1
-# Tested on clean install of Ubuntu 12.04 LTS x64
+# Copyright (c) 2013 Alex Ionescu 
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy of
+# this software and associated documentation files (the "Software"), to deal in
+# the Software without restriction, including without limitation the rights to
+# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+# the Software, and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
+
+# GITLAB v5.1 Install Script
+# Author: Alex Ionescu <ionescuac@gmail.com>
+# github.com/alexionescu/gitlab-installer 
+# Tested on clean install of Ubuntu 12.04 LTS x64
 
 # Test if we have root
 if [ "$(id -u)" -ne "0" ] ; then
@@ -12,8 +32,17 @@ if [ "$(id -u)" -ne "0" ] ; then
 	exit
 fi
 
+echo -e "\e[1;34***********************************************************\e[0m"
+echo -e "\e[1;34***********************************************************\e[0m"
+echo -e "\e[1;34**                                                      ***\e[0m"
+echo -e "\e[1;34**                 GITLAB v5.1 INSTALLER                ***\e[0m"
+echo -e "\e[1;34**       github.com/alexionescu/gitlab-installer        ***\e[0m"
+echo -e "\e[1;34**                                                      ***\e[0m"
+echo -e "\e[1;34***********************************************************\e[0m"
+echo -e "\e[1;34***********************************************************\e[0m"
+
 # Config questions
-echo -n "Enter the domain/IP GitLab will be accessible from (git.exmaple.com): "
+echo -n "\n\e[1;36Enter the domain/IP GitLab will be accessible from (git.exmaple.com): \e0m"
 read domain
 
 if [ -z $domain ] ; then
@@ -21,7 +50,7 @@ if [ -z $domain ] ; then
 	exit
 fi
 
-echo -n "Enter a preferred password for the root and gitlab MySQL accounts. If blank the script will generate a random password for you: "
+echo -n "\e[1;36Enter a preferred password for the root and gitlab MySQL accounts. If blank the script will generate a random password for you: \e[0m"
 read -s userPassword
 
 if [ $userPassword ] ; then
